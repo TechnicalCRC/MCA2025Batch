@@ -1,0 +1,31 @@
+body{
+  background-color: cyan;
+  background-image: url(../pic/help.jpg);
+  background-repeat:repeat-x;
+  background-position: center;
+}
+h1,p, b{
+  color: red;
+}
+.a-one{
+  color:rgb(41, 133, 240); 
+  border: 2px double red;
+  border-radius: 5px;
+  
+}
+
+#b-one{
+  color: cornsilk;
+  border-bottom-width: 2px;
+  border-bottom-color:black;
+  border-bottom-style: dotted;
+}
+*{
+  font-size: 20px;
+}
+
+
+.para1{
+  color: #8E6225 ;
+
+}

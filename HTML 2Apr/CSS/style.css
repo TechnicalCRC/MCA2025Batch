@@ -1,0 +1,40 @@
+.main{
+  background-color: gainsboro;
+  width: 100px;
+}
+input[type=text], input[type=password],input[type=email]{
+  width: 100%;
+  margin-bottom: 10px;
+}
+h1{
+  text-align: center;
+}
+label{
+  font-weight: bolder;
+  font-size: 18px;
+  color: rgb(0, 0, 255);
+}
+select{
+  width: 100%;
+  margin-bottom: 10px;
+}
+fieldset{
+  margin: 10px;
+}
+input[type=text]:hover, input[type=password]:hover,input[type=email]:hover{
+  background-color: aquamarine;
+  border: 0px;
+}
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus{
+  background-color: pink;
+}
+input[type=submit],input[type=reset]{
+  width: 48%;
+  float: left;
+  background-color: steelblue;
+  font-size: 20px;
+  font-weight: bolder;
+  color: whitesmoke;
+  border: 0px;
+  margin-left: 4px;
+}
