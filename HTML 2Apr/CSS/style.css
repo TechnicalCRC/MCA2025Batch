@@ -1,6 +1,6 @@
 .main{
   background-color: gainsboro;
-  width: 100px;
+  width: 100%;
 }
 input[type=text], input[type=password],input[type=email]{
   width: 100%;
