@@ -1,6 +1,9 @@
 .main{
   background-color: gainsboro;
-  width: 100%;
+  width: 50%;
+  /* text-align: center; */
+  /* align-items: center; */
+  margin: auto;
 }
 input[type=text], input[type=password],input[type=email]{
   width: 100%;
@@ -19,7 +22,7 @@ select{
   margin-bottom: 10px;
 }
 fieldset{
-  margin: 10px;
+  margin: 20px;
 }
 input[type=text]:hover, input[type=password]:hover,input[type=email]:hover{
   background-color: aquamarine;
@@ -32,9 +35,17 @@ input[type=submit],input[type=reset]{
   width: 48%;
   float: left;
   background-color: steelblue;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bolder;
   color: whitesmoke;
   border: 0px;
   margin-left: 4px;
+}
+ul{
+  list-style-type: none;
+  background-color: yellow;
+}
+li{
+  display: inline;
+  background-color: chartreuse;
 }
