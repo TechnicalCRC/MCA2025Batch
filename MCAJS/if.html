@@ -7,12 +7,60 @@
 
 <body>
   <script>
-    let x = 10;
-    if (x > 10)
-      document.write('true');
-    else
-      document.write("false"); 
-  </script>
+  // if - else
+// let x = 10;
+    // if (x > 10)
+    //   document.write('true');
+    // else
+    //   document.write("false"); 
+
+  // Scope
+  // let age = 10;
+
+  // let msg;
+  // if(age>18){
+  //   msg = 'you can ride Bike';
+  //   console.log(msg);
+  // }
+  // else
+  // {
+  //   msg = 'Use Bicycle instead';
+  //   console.log(msg);
+  // }
+  // console.log(msg);
+
+
+  // if - alternatives
+   let age1 = 20;
+  // //  ternary
+
+  age1 > 18 ? result = 'ride bike' : result = 'ride bicycle';
+  console.log(' Age = ' +age1);
+  console.log(result);
+
+  // guard operator
+  // use to replace/guard 6 falsy values - 0,'',false, NaN, undefined, null. 
+  //let age = 10;
+ //  let age = undefined; // undefined // let age;
+   //let age = 0; // 0
+  //let age = null; // null
+  //let age = ''; // ''  ""  ``
+ // let age = 'tan ' *10; // 0/0 NaN
+  // let age = false;
+
+  // let final_age = age || 18;
+  // console.log(age);
+  // console.log(final_age); 
+
+  // default operator
+  // use to replace/default 2 falsy values - undefined, null. 
+  let age = null;
+
+  let final_age = age ?? 18;
+  console.log(age);
+  console.log(final_age); 
+
+</script>
 
 </body>
 
