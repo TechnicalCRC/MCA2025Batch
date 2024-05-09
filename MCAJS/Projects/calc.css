@@ -1,0 +1,28 @@
+.main{
+  border: 2px solid rgb(221, 195, 195);
+  width: 220px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+input{
+  width: 89%;
+  margin: 2px;
+  border: 2px solid rgb(198, 96, 96);
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+}
+.mybtn{
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  margin: 5px;
+   border: 2px solid rgb(67, 60, 193);
+   border-radius: 5px;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
