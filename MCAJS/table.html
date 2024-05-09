@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Table of no</title>
+</head>
+
+<body>
+  <h1>Table of Number</h1>
+  <input type="text" id="t1" placeholder="Enter no here">
+  <br>
+  <button onclick="
+      let c = confirm('Do you want to draw the table...');
+    console.log(c);
+    if(c == true){
+      let n = Number(document.getElementById('t1').value);
+      let result='';
+         for(i=1; i <=10;i++){
+          result += `${n} x ${i} = ${n*i} <br>`;
+          console.log(`${n} x ${i} = ${n*i}`);
+         }
+        document.getElementById('p1').innerHTML = result;
+    }
+  ">Draw Table</button>
+  <hr>
+  <p id="p1"></p>
+  <script>
+    // let c = confirm('Do you want to confirm');
+    // console.log(c);
+  </script>
+</body>
+
+</html>
