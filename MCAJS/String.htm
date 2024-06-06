@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings</title>
+</head>
+
+<body>
+
+  Enter , (comma) values in textbox
+  <br>
+  <input type="text" id="txt">
+  <button onclick="split()">Click</button>
+
+   <p id="res"></p>
+  
+
+  <script>
+    // Strings in JS
+
+    //  let str = '2+6';
+    //  console.log(str);
+    //  console.log(eval(str));
+
+    //  let str1 = new String('2+4');
+    //  console.log(str1);
+    //  console.log(eval(str1));
+    //  console.log(eval(str1.valueOf()));
+
+
+    // charAt
+    let str = 'Ramesh Kumar';
+    console.log(str);
+    // console.log(str.charAt(3));
+    // console.log(str.concat(' Sharma'));
+    // console.log(str.indexOf('a'));
+    // console.log(str.lastIndexOf('a'));
+
+    // console.log(str.match('a'));
+
+    // console.log(str.replace('a', 'rm'));
+
+
+    // console.log(str);
+    // console.log(str.search('m'));
+
+    // console.log(str.split('a'));
+
+    console.log(str.toLowerCase());
+    console.log(str.toUpperCase());
+
+    console.log(str.substr(0,5));
+    console.log(str.substring(0,5));
+    console.log(str.slice(0,5));
+
+    console.log(str.substr(4,5));
+    console.log(str.substring(6,2));
+    console.log(str.slice(6,2));
+
+
+
+
+
+
+
+
+
+    let split = () => {
+      let txt = document.getElementById('txt').value;
+
+      let arr = txt.split(',');
+      let result = document.getElementById('res');
+      for(i=0;i<arr.length;i++)
+      {
+        let sq = arr[i]*arr[i];
+        result.innerText += `square of ${arr[i]} is ${sq}\n`;
+      }
+
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
