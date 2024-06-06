@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+</head>
+
+<body>
+  <script>
+
+    // Array
+    // let arr = [1,2,3,4];
+    // console.log(arr);
+
+    // let arr1 = new Array(2);
+    // arr1[0] = 'ram';
+    // arr1[1] = 'shyam';
+
+    // console.log(arr1);
+
+    //  let arr2 = new Array('BBA','BCA','BA');
+    //  console.log(arr2);
+
+    //    console.log(arr2[1]);
+
+    // for(i=0; i<arr2.length; i++){
+    //   console.log(arr2[i]);
+    // }
+
+    //  for(a of arr2){
+    //   console.log(a);
+    //  }
+
+    // for(a in arr2){
+    //   console.log(a);
+    // }
+
+    // for(a in arr2){
+    //   console.log(arr2[a]);
+    // }
+
+
+    // let arr = [34, 'Amit Kumar', 345.67];
+    // console.log(arr);
+
+
+    // spread operator ...
+    //   let arr = [12,3,41,6];
+
+    //   console.log(Math.max(4,7,12,20,6));
+    //   console.log(Math.max(arr));
+    //   console.log(Math.max(...arr));
+
+    // console.log(Math.min(arr[0],arr[1],arr[2],arr[3]));
+
+    //  let arr1 = [2,3,4,5];
+    //  let arr2 = [6,7,8];
+    //  let arr3 = [arr1,arr2];
+    //  console.log(arr3);
+
+    //  let arr4 = [...arr1,...arr2];
+    //  console.log(arr4);
+
+    // let arr = ['ram', 'shyam', 'nitin', 'yash'];
+
+    // // let arr1 = arr;
+    // // arr1[2] = 'neha';
+
+    // // console.log(arr);
+
+    // function me(ar2) {
+    //   ar2[1] = 'Himanshu'; 
+    // }
+    // me(arr);
+    // console.log(arr); // affected // pass by ref
+
+    // let arr = ['ram', 'shyam', 'nitin', 'yash'];
+
+    // let arr1 = [...arr];
+    // arr1[2] = 'neha';
+
+    // console.log(arr); // pass by value
+
+
+  //  let arr = [1,2,3,4];
+    // arr.push(8);
+    // console.log(arr);
+    // arr.unshift(10);
+    // console.log(arr);
+
+    // arr.pop();
+    // arr.pop();
+    // arr.shift();
+    // arr.shift();
+    // console.log(arr);
+//console.log(arr);
+ //   console.log(arr.slice(1,4));
+
+    // arr.splice(0,2,'ram','vipin','age','name');
+    // console.log(arr);
+
+
+    let arr = [12,35,25,53];
+    let f = arr.find((val)=>{
+      return val>60;
+    });
+    console.log(f);
+    
+
+    function sq(v){
+    console.log(v*v);
+    }
+  arr.forEach((val)=>sq(val));
+
+  let newArr = arr.map((e)=>e*10);
+  console.log(newArr);
+
+
+  </script>
+
+</body>
+
+</html>
