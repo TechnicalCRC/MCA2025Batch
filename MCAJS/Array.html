@@ -84,7 +84,7 @@
     // console.log(arr); // pass by value
 
 
-  //  let arr = [1,2,3,4];
+    //  let arr = [1,2,3,4];
     // arr.push(8);
     // console.log(arr);
     // arr.unshift(10);
@@ -95,28 +95,31 @@
     // arr.shift();
     // arr.shift();
     // console.log(arr);
-//console.log(arr);
- //   console.log(arr.slice(1,4));
+    //console.log(arr);
+    //   console.log(arr.slice(1,4));
 
     // arr.splice(0,2,'ram','vipin','age','name');
     // console.log(arr);
 
 
-    let arr = [12,35,25,53];
-    let f = arr.find((val)=>{
-      return val>60;
+    let arr = [12, 35, 25, 53];
+    let f = arr.find((val) => {
+      return val > 60;
     });
     console.log(f);
-    
 
-    function sq(v){
-    console.log(v*v);
+
+    function sq(v) {
+      console.log(v * v);
     }
-  arr.forEach((val)=>sq(val));
+    arr.forEach((val) => sq(val));
 
-  let newArr = arr.map((e)=>e*10);
-  console.log(newArr);
+    let newArr = arr.map((e) => e * 10);
+    console.log(newArr);
 
+    let farr = arr.filter((val) => val % 5 != 0)
+    console.log(arr);
+    console.log(farr);
 
   </script>
 
