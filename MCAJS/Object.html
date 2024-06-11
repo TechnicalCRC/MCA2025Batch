@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  
+  <script>
+    // objects in JS
+
+    // let person = {
+    //   name:'Ramesh',
+    //   age:34,
+    //   grad:'BCA'
+    // }
+    // console.log(person);
+    // let arr = [11,21,3,4];
+    // console.log(arr);
+
+    // let car = {}
+    // car.color='red';
+    // car.model='VXi';
+    // car.tyre_type= 'CEAT';
+    // car.price = 2345;
+
+    // console.log(car);
+
+    // let car = new Object();
+    // car.color='red';
+    // car.model='VXi';
+    // car.tyre_type= 'CEAT';
+    // car.price = 2345;
+    // console.log(car);
+
+    let car = new Object(
+      {
+        'company':'Maruti','seat':4
+      }
+    );
+    car.color='red';
+    car.model='VXi';
+    car.tyre_type= 'CEAT';
+    car.price = 2345;
+    car.seat = 6;
+    car.price = 567802;
+    console.log(car);
+
+    console.log(car.color);
+    console.log(car.company);
+    console.log(car['model']);
+    console.log(car["price"]);
+    console.log(car[`seat`]);
+
+    for(i in car){
+//   console.log(i + " : " + car[i]);
+console.log(`${i} : ${car[i]}`);
+}
+    
+  </script>
+</body>
+</html>
