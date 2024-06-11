@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Picker</title>
+  <style>
+    .head{text-align: center;background-color: rgba(0, 255, 255, 0.158);color:violet;}
+    .head1{text-align: center;background-color:bisque;color:red;}
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td><h2 class="head"> Menu Picker <br>Lunch Predictor</h2></td>
+      <td><h2 class="head1"> Menu Picker <br>Dinner Predictor</h2></td> 
+    </tr>
+    <tr> 
+      <td><button onclick="lunch()">Click for Predict</button></td>
+      <td><button onclick="dinner()">Click for Predict</button></td> 
+    </tr>
+    <tr>  
+      <td> <p id="res-lunch"></p>  </td>
+      <td> <p id="res-dinner"></p>  </td>  
+    </tr>
+  </table>
+
+  <script>
+    let menu=[
+      'Chole Bhature',
+      'Pani Puri',
+      'Dal Makhni',
+      'Rumali Roti',
+      'Malai Khofta',
+      'Kadhai Panner',
+      'Matar Paneer',
+      'Pizza',
+      'Kadhi Chawal',
+      'Churma',
+      'Khicdi',
+      'Sahi Paneer',
+      'Dezzert Food',
+      'Jalebi'
+    ];
+
+    function lunch(){
+      let val = Math.floor(Math.random()*menu.length);
+      let res = document.getElementById('res-lunch');
+      res.innerHTML = `Today's Lunch is ${menu[val]}`;
+      res.setAttribute('style','background-color:yellow;color:red;font-size:30px')
+    }
+
+    function dinner(){
+      let val = Math.floor(Math.random()*menu.length);
+      let res = document.getElementById('res-dinner');
+      res.innerHTML = `Today's Dinner is ${menu[val]}`;
+      res.setAttribute('style','background-color:yellowgreen;color:blue;font-size:30px')
+    }
+</script>
+  
+</body>
+</html>
