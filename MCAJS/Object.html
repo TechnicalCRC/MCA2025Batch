@@ -34,30 +34,82 @@
     // car.price = 2345;
     // console.log(car);
 
-    let car = new Object(
-      {
-        'company':'Maruti','seat':4
-      }
-    );
-    car.color='red';
-    car.model='VXi';
-    car.tyre_type= 'CEAT';
-    car.price = 2345;
-    car.seat = 6;
-    car.price = 567802;
-    console.log(car);
+//     let car = new Object(
+//       {
+//         'company':'Maruti','seat':4
+//       }
+//     );
+//     car.color='red';
+//     car.model='VXi';
+//     car.tyre_type= 'CEAT';
+//     car.price = 2345;
+//     car.seat = 6;
+//     car.price = 567802;
+//     console.log(car);
 
-    console.log(car.color);
-    console.log(car.company);
-    console.log(car['model']);
-    console.log(car["price"]);
-    console.log(car[`seat`]);
+//     console.log(car.color);
+//     console.log(car.company);
+//     console.log(car['model']);
+//     console.log(car["price"]);
+//     console.log(car[`seat`]);
 
-    for(i in car){
-//   console.log(i + " : " + car[i]);
-console.log(`${i} : ${car[i]}`);
-}
+//     for(i in car){
+// //   console.log(i + " : " + car[i]);
+// console.log(`${i} : ${car[i]}`);
+// }
     
+
+ // methods in Object
+
+//    let student = {
+//     fname:'Varun',
+//     lname:'Singh',
+//     age:22,
+//     fullName: function(){
+//       return this.fname + " " + this.lname;
+//     },
+//     marks:450,
+//     displayMarks:function(newMarks){
+//       full = this.marks+newMarks; 
+//       console.log("Final Marks are " + full);
+//     }
+//    }
+
+//    console.log(student.fname);
+//    console.log(student.age);
+//    console.log(student.fullName());
+// student.displayMarks(34);
+
+// destructuring 
+
+// let arr = [12,45,'Ramesh',[1,2,34],56.6];
+// console.log(arr);
+
+// let [a,b,c,d,e,f,g,h,] = arr;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(h);
+
+
+let car = {
+  model:'VXt',
+  price:34453,
+  color:'Red'
+}
+
+let {model,color,price} = car;
+
+console.log(car.model);
+console.log(model);
+console.log(color);
+console.log(price);
+
+let {a,b,c} = car;
+
+console.log(a);
   </script>
 </body>
 </html>
