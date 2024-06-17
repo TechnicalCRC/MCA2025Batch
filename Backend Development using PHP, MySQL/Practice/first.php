@@ -165,4 +165,3 @@
 // }
 
 echo date('d - m - Y : l  h:i:s a');
-?>
