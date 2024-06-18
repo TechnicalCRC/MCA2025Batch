@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom 3</title>
+</head>
+
+<body>
+
+  <h1> This is Todo</h1>
+  <br>
+  <input type="text" id="t1" placeholder="Enter todo here" autocomplete="off">
+  <button onclick="addTodo()">Add Todo</button>
+
+  <p id="result"></p>
+
+  <script>
+    function addTodo() {
+      let res = document.getElementById('result');
+      let txt = document.getElementById('t1').value;
+
+      let val = `<p> ${txt} </p>`;
+      res.innerHTML += val;
+      txt = '';
+    }
+
+  </script>
+</body>
+
+</html>
