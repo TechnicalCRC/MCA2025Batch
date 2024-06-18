@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dom 2</title>
+</head>
+<body>
+
+  <h1 id="p4">This is Dom 2</h1>
+  <p id="p1">This is para 1</p>
+  <p id="p5">This is para 2</p>
+  <p id="p2">This is para 3</p>
+  <i id="p3">This is italic</i>
+
+  <script>
+     document.getElementById('p1').style.color='blue';
+    // console.log(document.getElementById('p1'));
+    document.getElementById('p2').style.color='red';
+
+    document.getElementById('p1').innerText = "Welcome";
+    document.getElementById('p3').innerHTML='<b>Hello me </b>';
+    
+    document.getElementById('p4').outerText='MCA 1st';
+    
+    document.getElementById('p5').outerHTML = '<b>New Outer HTML Apply</b>';
+    
+    
+  </script>
+  
+</body>
+</html>
