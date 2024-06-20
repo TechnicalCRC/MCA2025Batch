@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1 style="text-align: center;">Even Odd Checker App</h1>
+  <hr>
+  <input type="number" placeholder="Enter Number here" id="t1">
+  <button onclick="checkEO()">Check Even/Odd</button>
+  <hr>
+  <div>
+    <div style="float: left; border: 2px solid red; width: 46%;">
+      <h2 style="text-align: center;">Even's</h2>
+      <p id="result-even"> </p>
+    </div>
+    <div style="float: right; border: 2px solid blue; width: 46%;">
+      <h2 style="text-align: center;">Odd's</h2>
+      <p id="result-odd"> </p>
+    </div>
+  </div>
+
+  <script>
+  let checkEO = ()=>{
+    let txt = Number(document.querySelector('#t1').value);
+    if(txt %2 == 0)
+    {
+      document.querySelector('#result-even').innerHTML +=  `<p> ${txt} </p>`;
+    }
+    else
+    {
+      document.querySelector('#result-odd').innerHTML +=  `<p> ${txt} </p>`;
+    }
+  }
+  </script>
+</body>
+
+</html>
