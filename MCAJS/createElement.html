@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Create Element</title>
+</head>
+
+<body>
+  <h1>Create Element</h1>
+  <button onclick="add()">Create</button>
+
+  <h4 id="result"></h4>
+  <script>
+    let count = 0 ;
+    function add() {
+      let newElement = document.createElement('b');// <b> </b>
+
+      newElement.innerText = 'This is para ' + (++count);
+
+      // document.querySelector('#result').appendChild(newElement);
+      let res = document.querySelector('#result');
+      res.appendChild(newElement);
+
+    }
+  </script>
+</body>
+
+</html>
