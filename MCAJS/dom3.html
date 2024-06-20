@@ -19,13 +19,12 @@
   <script>
     function addTodo() {
       let res = document.getElementById('result');
-      let txt = document.getElementById('t1').value;
+      let txt = document.getElementById('t1');
 
-      let val = `<p> ${txt} </p>`;
+      let val = `<p> ${txt.value} </p>`;
       res.innerHTML += val;
-      txt = '';
+      txt.value = '';
     }
-
   </script>
 </body>
 
