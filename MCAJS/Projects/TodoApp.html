@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Todo App</title>
+  <style>
+    b{
+       border-radius: 5px;
+       margin: 5px;
+       padding: 5px;      
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center;">Todo App</h1>
+  <hr>
+  <input type="text" placeholder="Enter todo here" id="todo-text">
+  <input type="date" id="todo-date">
+   <button onclick="addTodo()">Add Todo</button>
+  <hr>
+
+  <p id="main-container"></p>
+
+  <script>
+   let addTodo = () =>{
+    // create parent element
+    let parentElement = document.createElement('p');
+
+     // create child elememt
+    let todoText = document.createElement('b');
+    let todoDate = document.createElement('b');
+    let todoDelBtn = document.createElement('button');
+
+    todoText.innerHTML = document.querySelector('#todo-text').value;
+    todoDate.innerHTML = document.querySelector('#todo-date').value;
+    todoDelBtn.innerHTML = 'Delete';
+
+    todoText.style.backgroundColor = 'red';
+    todoText.style.color = 'white';
+
+    todoDate.style.backgroundColor = 'blue';
+    todoDate.style.color = 'white';
+    
+    parentElement.append(todoText);
+    parentElement.append(todoDate);
+    parentElement.append(todoDelBtn);
+
+    parentElement.setAttribute('style','background-color:grey; border:2px solid red; border-radius:5px; padding:10px;');
+
+    document.querySelector('#main-container').appendChild(parentElement);
+   }
+  </script>
+</body>
+</html>
