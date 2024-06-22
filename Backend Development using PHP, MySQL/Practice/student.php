@@ -9,7 +9,7 @@
 
 <body>
   <h2>Student Data</h2>
-  <form action="student.php" method="get">
+  <form action="student.php" method="post">
     Enter Student Name : <input type="text" placeholder="Place Name here" name="sname"> <br>
     Enter Student Course : <input type="text" placeholder="Enter Course" name="course"> <br>
     Enter Student Marks : <input type="text" placeholder="Enter Marks" name="marks"> <br>
@@ -18,7 +18,7 @@
   <hr>
   <?php
 
-  if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_REQUEST['sname'] != '' && $_REQUEST['course'] != '' && $_REQUEST['marks'] != '') {
       $name = $_REQUEST['sname'];
       $course = $_REQUEST['course'];
