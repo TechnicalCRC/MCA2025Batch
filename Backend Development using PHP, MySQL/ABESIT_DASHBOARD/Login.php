@@ -28,6 +28,12 @@ if(mysqli_num_rows($result)>0){
  // echo 'Congrats Login Success..';
 
   $success= 1;
+ session_start();
+ $_SESSION['username'] = $username;
+
+ header('location:Dashboard/Event_Dashboard.php');
+
+
 }
 else{
 //  echo 'Login faild due to invalid User Name & Password.. Try Again..';
