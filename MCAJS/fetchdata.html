@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>fetch data</h1>
+  <button onclick="f1()">click to fetch</button>
+  <script>
+    function f1(){
+    localStorage.setItem('name','vipin');
+    let n = localStorage.getItem('name');
+    console.log("Name : "+n); 
+    
+    localStorage.setItem('age',12);
+
+    localStorage.removeItem('name');
+    localStorage.clear();
+    }
+  </script>
+  
+</body>
+</html>
