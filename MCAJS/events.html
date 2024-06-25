@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1>Events in JavaScript</h1>
+  <hr>
+  <p id="p1" onmouseover="f1()"
+  onmouseout="f2()"> Hello Here</p>
+  <hr>
+<script>
+  function f1(){
+   let val = document.querySelector('#p1');
+  // val.innerText = 'Bye Here';
+  //  val.style.backgroundColor='red';
+  val.style.fontWeight='bold';
+  }
+  function f2(){
+//   p1.innerText = 'Hello Here';
+   //p1.style.backgroundColor='white';
+    p1.style.fontWeight='normal';
+  }
+
+</script>
+
+</body>
+</html>
