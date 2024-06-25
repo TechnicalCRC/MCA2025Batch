@@ -22,6 +22,7 @@
   <p id="main-container"></p>
 
   <script>
+    let count=0;
    let addTodo = () =>{
     // create parent element
     let parentElement = document.createElement('p');
@@ -40,15 +41,28 @@
 
     todoDate.style.backgroundColor = 'blue';
     todoDate.style.color = 'white';
-    
+ 
+    let id = 'p' + (++count);
+
+    todoDelBtn.setAttribute('style','float:right; color:blue; background-color:yellow; border:2px dotted red; border-radius:5px');
+   
+    todoDelBtn.setAttribute('onclick',`removeElement(${id})`);
+   
     parentElement.append(todoText);
     parentElement.append(todoDate);
     parentElement.append(todoDelBtn);
 
-    parentElement.setAttribute('style','background-color:grey; border:2px solid red; border-radius:5px; padding:10px;');
+    parentElement.setAttribute('style','background-color:lightgrey; border:2px solid red; border-radius:5px; padding:10px;');
+
+    parentElement.setAttribute('id',id);
 
     document.querySelector('#main-container').appendChild(parentElement);
    }
+
+   function removeElement(id){
+    id.remove();
+   }
+
   </script>
 </body>
 </html>
