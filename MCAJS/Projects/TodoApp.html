@@ -46,7 +46,8 @@
 
     todoDelBtn.setAttribute('style','float:right; color:blue; background-color:yellow; border:2px dotted red; border-radius:5px');
    
-    todoDelBtn.setAttribute('onclick',`removeElement(${id})`);
+// todoDelBtn.setAttribute('onclick',`removeElement(${id})`); //  id.remove();
+todoDelBtn.setAttribute('onclick',`removeElement('${id}')`); //
    
     parentElement.append(todoText);
     parentElement.append(todoDate);
@@ -60,9 +61,10 @@
    }
 
    function removeElement(id){
-    id.remove();
-   }
-
+// id.remove();
+document.querySelector('#main-container').removeChild
+  (document.querySelector(`#${id}`));
+    }
   </script>
 </body>
 </html>
