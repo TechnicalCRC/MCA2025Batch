@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1> fetch API</h1>
+  <h1>Jokes - Random fetch</h1>
+  
+  <h2 id="result"></h2>
+
+  <script>
+    url = 'https://official-joke-api.appspot.com/random_joke';
+    promise = fetch(url);
+    promise
+    .then((response)=>{
+   return response.json();
+    })
+    .then((data)=>{
+  document.querySelector('#result').innerHTML = `
+   <br> <b>Joke Type : </b> ${data.type}
+   <br> <b>Setup Question : </b> ${data.setup}
+   <br> <b>Punch Line : </b> ${data['punchline']}
+   <br>
+  `;
+
+    })
+
+  </script>
+ 
+</body>
+</html>
