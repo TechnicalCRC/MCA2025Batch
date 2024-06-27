@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+<h1>Session Storage</h1>
+<button onclick="set()">Set Data</button>
+<button onclick="get()">Get Data</button>
+  <script>
+   function set(){
+    sessionStorage.setItem('uname','Ramesh');
+    sessionStorage.setItem('pass','1234');
+   }
+   function get(){
+    console.log(sessionStorage.getItem('uname'));
+    console.log(sessionStorage.getItem('pass'));
+   }
+  </script>
+</body>
+</html>
