@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Fetch API</title>
+</head>
+
+<body>
+  <h1> fetch API from JavaScript</h1>
+  <h1> Gender Predict</h1>
+  <input type="text" id="name" placeholder="Enter Name">
+  <button onclick="fetchGender()">Click to Find Gender</button>
+
+  <p id="result"></p>
+
+  <script>
+    function fetchGender() {
+      let name = document.querySelector('#name').value;
+      let url = 'https://api.genderize.io?name=' + name;
+
+      let promise = fetch(url);
+
+      promise
+      .then((response)=>{
+         return response.json();
+      })
+      .then((data)=>{
+//        console.log(data.gender);  
+result.innerHTML = `Gender of ${data.name} is ${data.gender.toUpperCase()} and its probabilty is ${data.probability}`;  
+      });
+     
+
+      //    result.innerHTML = url;
+    }
+  </script>
+</body>
+
+</html>
