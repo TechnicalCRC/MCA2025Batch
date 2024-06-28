@@ -13,7 +13,9 @@
 <body>
   <div class="container">
     <h1 class="text-center bg-primary text-white">My Food App</h1>
-
+    <select id="foods" class="w-100" onchange="display()">
+      <option value="">Choose One</option>
+    </select>
   </div>
   <script>
     function fetchdata() {
@@ -23,11 +25,35 @@
         .then((response) => {
           return response.json();
         })
-        .then((data) => {
-          console.log(data.meals);
+        .then((data) => {  //   console.log(data.meals);
+          let items = data.meals;
+          let str = `<option value="">Choose One</option>`;
+          items.map((item) => {
+            str += `<option value=${item.strCategory}>${item.strCategory}</option>`;
+          });
+          document.querySelector('#foods').innerHTML = str;
         });
     }
     fetchdata();
+
+    function display() {
+      let foodCategory = document.querySelector('#foods').value;
+      let url = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=' + foodCategory;
+
+      fetch(url)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {  //   console.log(data.meals);
+          let items = data.meals;
+          let str = `<option value="">Choose One</option>`;
+          items.map((item) => {
+            str += `<option value=${item.strCategory}>${item.strCategory}</option>`;
+          });
+          document.querySelector('#foods').innerHTML = str;
+        });
+
+    }
   </script>
 
 </body>
