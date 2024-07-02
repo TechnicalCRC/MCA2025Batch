@@ -17,10 +17,10 @@
           <a class="nav-link" href="AddParticipants.php">Add Participants</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Login.php">Display Participants</a>
+          <a class="nav-link" href="DisplayParticipants.php">Display Participants</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Dashboard/Event_Dashboard.php">Profile</a>
+          <a class="nav-link" href="Profile.php">Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../Logout.php">Logout</a>
