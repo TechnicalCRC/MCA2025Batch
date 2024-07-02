@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2024 at 07:33 AM
+-- Generation Time: Jul 02, 2024 at 06:42 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,6 +45,32 @@ INSERT INTO `event_tb` (`event_id`, `event_name`, `event_desc`, `event_image`) V
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `participants_tb`
+--
+
+CREATE TABLE `participants_tb` (
+  `id` int(3) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `collegename` varchar(30) NOT NULL,
+  `branch` varchar(10) NOT NULL,
+  `mobile` varchar(11) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `age` int(3) NOT NULL,
+  `gender` enum('m','f','o') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `participants_tb`
+--
+
+INSERT INTO `participants_tb` (`id`, `name`, `collegename`, `branch`, `mobile`, `city`, `age`, `gender`) VALUES
+(1, 'Kunal', 'Mewar Institite', 'CSE', '86555644', 'Ghaziabad', 23, 'm'),
+(2, 'Vikash', 'JNU', 'AI', '76757555', 'delhi', 33, 'm'),
+(3, 'Soni', 'JSS', 'BCA', '656556', 'noida', 23, 'f');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `registration`
 --
 
@@ -77,6 +103,12 @@ ALTER TABLE `event_tb`
   ADD PRIMARY KEY (`event_id`);
 
 --
+-- Indexes for table `participants_tb`
+--
+ALTER TABLE `participants_tb`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `registration`
 --
 ALTER TABLE `registration`
@@ -92,6 +124,12 @@ ALTER TABLE `registration`
 --
 ALTER TABLE `event_tb`
   MODIFY `event_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `participants_tb`
+--
+ALTER TABLE `participants_tb`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `registration`

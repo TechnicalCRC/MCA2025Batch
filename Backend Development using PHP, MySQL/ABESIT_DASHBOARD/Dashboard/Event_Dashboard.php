@@ -15,15 +15,15 @@
 
 </head>
 <body>
-  <?php include 'header.php'; ?>
+  <?php include 'Dashheader.php'; 
+  echo 'Welcome Mr. ' . $_SESSION['username'];
+
+  ?>
 
 <br><br><br>
 <a href="../Logout.php">Logout</a>
 
-<?php include 'footer.php'; ?>
+<?php include 'Dashfooter.php'; ?>
 
 </body>
 </html>
-
-
-
