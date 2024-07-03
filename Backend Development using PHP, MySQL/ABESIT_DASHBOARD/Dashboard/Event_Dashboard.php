@@ -15,13 +15,23 @@
 
 </head>
 <body>
-  <?php include 'Dashheader.php'; 
-  echo 'Welcome Mr. ' . $_SESSION['username'];
+  <?php include 'Dashheader.php'; ?>
 
-  ?>
-
-<br><br><br>
-<a href="../Logout.php">Logout</a>
+<div class="container bg-warning mb-4">
+    <div class="container p-5">
+      <h2> Welcome,  <?php echo $_SESSION['username']; ?></h2>
+      <h3>Hello Here in this DashBoard</h3>
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, eveniet consequuntur iste quas, maxime at quidem quos, odio quod laborum rerum cupiditate obcaecati culpa ipsum accusamus odit facere voluptas sed impedit. Omnis dolores officia tempora, illo itaque error quod dicta tempore quam maiores quaerat harum adipisci laboriosam aspernatur aperiam deserunt?
+       </p>
+       <h3 class="bg-info">Operation you can handle here are as follows : </h3>
+       <ul>
+       <li>Add Participant</li>
+       <li>Display Participant</li>
+       <li>Update Participant</li>
+       <li>Delete Participant</li>
+       </ul>
+    </div>
+  </div>
 
 <?php include 'Dashfooter.php'; ?>
 

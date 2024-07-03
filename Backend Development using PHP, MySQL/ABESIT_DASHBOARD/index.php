@@ -14,13 +14,13 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="pic/heck3.jpeg" class="d-block w-100" alt="...">
+          <img src="pic/1.jpeg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="pic/heck5.jpg" class="d-block w-100" alt="...">
+          <img src="pic/2.jpeg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="pic/sih22.png" class="d-block w-100" alt="...">
+          <img src="pic/4.jpeg" class="d-block w-100" alt="...">
         </div>
       </div>
     </div>
@@ -50,6 +50,7 @@
          $result = $con->query($sql);
  
          while($row = $result->fetch_assoc()){
+          $id = $row['event_id'];
             echo '
        <div class="col-md-4 mb-3">
         <div class="card" style="width: 18rem;">
@@ -58,7 +59,7 @@
           <div class="card-body">
             <h5 class="card-title">'. $row['event_name'].'</h5>
             <p class="card-text">'. substr($row['event_desc'],0,65)   .'</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="Event_description.php?event_id='.$id.'" class="btn btn-primary">Read More</a>
           </div>
         </div>
       </div>';
