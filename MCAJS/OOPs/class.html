@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>class concept</h1>
+  <script>
+    // class Person {
+    //   name = 'Shyam';
+    //   age = 22;
+
+    //   ShowInfo = function () {
+    //     console.log(`I m ${this.name} & I m ${this.age} year old`);
+    //   }
+    // }
+
+    // let obj1 = new Person();
+    // obj1.ShowInfo();
+
+    // constructor
+    class Person {
+      constructor(name,age){   // name - local variable
+     this.name = name;          // this.name - instance variable
+      this.age = age;
+      }
+      ShowInfo = function () {         /// instance method
+        console.log(`I m ${this.name} & I m ${this.age} year old`);
+      }
+      static marks=340;               // static variable
+      static showMarks(){          // static method
+        console.log(`Marks are ${this.marks}`);
+      }
+    }
+
+    let obj1 = new Person('Varun',24);
+    obj1.ShowInfo();
+
+    let obj2 = new Person('Arun',26);
+    obj2.ShowInfo();
+
+    obj1.showMarks();     /// will give an error - static method calling by object
+    Person.showMarks();   // can only call by class in js
+</script>
+
+</body>
+
+</html>

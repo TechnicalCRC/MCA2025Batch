@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>class by function</h1>
+
+  <script>
+    // function Person(){
+    //   this.name = 'Ramesh';
+    //   this.age = 23;
+
+    //   this.showData=function(){
+    //     console.log(`I m ${this.name} & I m ${this.age} year old`);
+    //   }
+    // }
+
+    // let obj1 = new Person();
+    // obj1.showData();
+ 
+    // let obj2 = new Person();
+    // obj2.showData();
+
+    // constructor
+
+    function Person(name,age){
+      this.name = name;
+      this.age = age;
+
+      this.showData=function(){
+        console.log(`I m ${this.name} & I m ${this.age} year old`);
+      }
+    }
+
+    let obj1 = new Person('Vipin',21);
+    obj1.showData();
+ 
+    let obj2 = new Person('Arun',24);
+    obj2.showData();
+
+  </script>
+  
+</body>
+</html>
