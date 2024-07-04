@@ -1,10 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['username'])) {
-  header('location:../Login.php');
-}
-// echo 'Welcome Mr. ' . $_SESSION['username'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +55,8 @@ if (!isset($_SESSION['username'])) {
         </tr>  
         <tr>
           <th scope="row">Password</th>
-          <td>'. $password .'</td>
+          <td>'. $password .' <a href="PassChange.php" style="float:right;">Change Password</a>
+ </td>
         </tr>  
         <tr>
           <th scope="row">Email Id</th>
@@ -77,7 +71,6 @@ if (!isset($_SESSION['username'])) {
 
         }    
         ?>
-
       </tbody>
     </table>
   </div>
