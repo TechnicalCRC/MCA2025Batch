@@ -16,6 +16,11 @@
     <select id="foods" class="w-100" onchange="display()">
       <option value="">Choose One</option>
     </select>
+
+    <div class="row" id="food-list">
+
+    </div>
+
   </div>
   <script>
     function fetchdata() {
@@ -46,14 +51,37 @@
         })
         .then((data) => {  //   console.log(data.meals);
           let items = data.meals;
-          let str = `<option value="">Choose One</option>`;
+          let str = ``;
           items.map((item) => {
-            str += `<option value=${item.strCategory}>${item.strCategory}</option>`;
+            str += `
+      <div class="col-md-4 mt-2">
+        <div class="card" style="width: 18rem;">
+          <img src=${item.strMealThumb} class="card-img-top" alt="hello" style="width:100%; height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">${item.strMeal}</h5>
+            <a href="#" class="btn btn-primary" onclick="popup('${item.strMeal}','${item.strMealThumb}')">Click to Show</a>
+          </div>
+        </div>
+      </div>          
+            `;
           });
-          document.querySelector('#foods').innerHTML = str;
+          document.querySelector('#food-list').innerHTML = str;
         });
-
     }
+    
+    function popup(name,image){
+       document.write(`
+         <dialog open>
+             <img src=${image} style="width:500px; height:450px">
+             <p style="text-align:center"><h2> ${name}</p></h2>
+             <form method="dialog">
+               <button style="width:100%; background-color:blue; border-radius:10px; padding:5px"><a href="fetchAPI2.html" style="color:white;"> Close </a></button>
+             </form>
+         </dialog>       
+       `);
+    }
+
+
   </script>
 
 </body>

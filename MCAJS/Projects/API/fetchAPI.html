@@ -26,7 +26,11 @@
       })
       .then((data)=>{
 //        console.log(data.gender);  
-result.innerHTML = `Gender of ${data.name} is ${data.gender.toUpperCase()} and its probabilty is ${data.probability}`;  
+result.innerHTML = `
+Name : ${data.name} <br>
+Gender : ${data.gender} <br>
+Probability : ${data.probability} <br>
+Gender of ${data.name} is ${data.gender.toUpperCase()} and its probabilty is ${data.probability}`;  
       });
      
 
